@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { products, homeLineProducts } from '@/data/products';
+import { products } from '@/data/products';
 
 export const metadata = {
   title: 'Abt Exclusive Mattresses | Sleep6',
@@ -236,7 +236,7 @@ export default function AbtExclusivePage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {homeLineProducts.filter((p) => p.type !== 'Crib Mattress').map((product) => (
+            {products.filter((p) => p.type !== 'Crib Mattress').map((product) => (
               <Link
                 key={product.id}
                 href={`/products/${product.slug}`}

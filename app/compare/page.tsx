@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Star, ArrowRight } from 'lucide-react';
-import { homeLineProducts } from '@/data/products';
+import { products } from '@/data/products';
 
 export const metadata = {
   title: 'Compare | Sleep6',
@@ -18,7 +18,7 @@ const keyBenefits: Record<string, string> = {
 };
 
 // Sort home line products by price (ascending), excluding crib
-const sortedProducts = [...homeLineProducts]
+const sortedProducts = [...products]
   .filter((p) => p.type !== 'Crib Mattress')
   .sort((a, b) => a.price - b.price);
 

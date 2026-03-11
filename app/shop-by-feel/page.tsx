@@ -13,7 +13,7 @@ import {
   Volume2,
   ChevronDown,
 } from 'lucide-react';
-import { homeLineProducts } from '@/data/products';
+import { products } from '@/data/products';
 
 // Category definitions
 const sleepPositions = [
@@ -87,7 +87,7 @@ const sleepConcerns = [
 ];
 
 // Helper to get product by slug
-const getProductBySlug = (slug: string) => homeLineProducts.find((p) => p.slug === slug);
+const getProductBySlug = (slug: string) => products.find((p) => p.slug === slug);
 
 export default function ShopByFeelPage() {
   const [activePosition, setActivePosition] = useState<string | null>(null);
