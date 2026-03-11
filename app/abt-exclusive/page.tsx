@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react';
 import { products } from '@/data/products';
 
 export const metadata = {
-  title: 'Abt Exclusive Mattresses | Sleep6',
+  title: 'abt Exclusive Mattresses',
   description:
-    'Sleep6 mattresses available exclusively through Abt. American-made comfort — from essential foam to luxury hybrid.',
+    'abt Exclusive mattresses. American-made comfort — from essential foam to luxury hybrid.',
 };
 
 // abt Exclusive products only
@@ -214,78 +214,6 @@ export default function AbtExclusivePage() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Also Available — Sleep6 Home Line */}
-      <section className="py-24 relative overflow-hidden z-10">
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block text-gold-dark font-medium text-sm mb-4">
-              Also Available
-            </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-navy mb-4">
-              The Sleep6 <span className="wavy-underline">Home Line</span>
-            </h2>
-            <p className="text-gray-600 max-w-xl mx-auto leading-relaxed">
-              Can&apos;t visit Abt? Shop our online-exclusive collection — the same American-made craftsmanship, delivered direct to your door.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.filter((p) => p.type !== 'Crib Mattress').map((product) => (
-              <Link
-                key={product.id}
-                href={`/products/${product.slug}`}
-                className="group relative bg-white/80 rounded-3xl overflow-hidden border-2 border-transparent hover:border-gold/30 hover:shadow-xl hover:shadow-gold/5 transition-all duration-500"
-              >
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  {product.images[0] ? (
-                    <Image
-                      src={product.images[0]}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-                      <span className="text-gray-300 text-sm">Image Coming Soon</span>
-                    </div>
-                  )}
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1.5 bg-white text-gold-dark text-xs font-medium rounded-full shadow-sm">
-                      Online Exclusive
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-navy mb-2 group-hover:text-gold-dark transition-colors duration-300">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">{product.tagline}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-medium text-navy">
-                      From ${product.price.toLocaleString()}
-                    </span>
-                    <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-gold group-hover:translate-x-1 transition-all duration-300" />
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/home-line"
-              className="inline-flex items-center gap-3 border border-navy/20 hover:border-navy text-navy font-medium px-8 py-4 rounded-full transition-all duration-500 hover:shadow-lg group"
-            >
-              View All Sleep6 Products
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-500" />
-            </Link>
           </div>
         </div>
       </section>

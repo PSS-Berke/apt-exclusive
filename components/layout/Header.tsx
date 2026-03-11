@@ -10,7 +10,6 @@ const navigation = {
   mattresses: {
     label: 'Mattresses',
     items: [
-      { name: 'Sleep6', href: '/home-line' },
       { name: 'Abt Exclusive', href: '/abt-exclusive' },
       { name: 'Shop by Feel', href: '/shop-by-feel' },
       { name: 'Compare Mattresses', href: '/compare' },
@@ -47,7 +46,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image
               src="/images/logo.png"
-              alt="Sleep6 - Crafted in Chicago"
+              alt="Abt Exclusive Mattresses"
               width={180}
               height={50}
               className="h-10 w-auto"
@@ -106,7 +105,7 @@ export default function Header() {
           {/* CTA button and Cart */}
           <div className="hidden lg:flex items-center gap-4">
             <Link
-              href="/home-line"
+              href="/abt-exclusive"
               className="bg-gold hover:bg-gold-dark text-white font-semibold px-6 py-2.5 rounded-full transition-colors"
             >
               Shop Now
@@ -174,7 +173,7 @@ export default function Header() {
             </div>
             <div className="pt-4">
               <Link
-                href="/home-line"
+                href="/abt-exclusive"
                 className="block w-full bg-gold hover:bg-gold-dark text-white font-semibold px-6 py-3 rounded-full text-center transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >

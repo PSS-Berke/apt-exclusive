@@ -26,9 +26,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Sleep6 | American-Made Mattresses | Six Essential Components",
+  title: "Abt Exclusive | Premium American-Made Mattresses",
   description:
-    "Discover Sleep6 - premium mattresses handcrafted in the USA with 25+ years of expertise. Six essential components for the perfect night's sleep. Free delivery, financing available, up to 20 year warranty.",
+    "Shop Abt Exclusive mattresses - premium handcrafted mattresses made in the USA with 25+ years of expertise. Luna, Mystic, FAK Cosmos, Cosmos Hybrid, and Insatiable. Free delivery, financing available.",
   keywords: [
     "American made mattress",
     "USA mattress",
