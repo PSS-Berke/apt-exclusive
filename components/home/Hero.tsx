@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-8 pb-20 md:py-24">
+    <section className="relative overflow-hidden pt-4 pb-20 md:pt-8 md:pb-24">
       {/* Organic blob shapes */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/15 blob-shape blur-3xl -translate-y-1/3 translate-x-1/4" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy/5 blob-shape-alt blur-3xl translate-y-1/3 -translate-x-1/4" />
@@ -50,7 +50,7 @@ export default function Hero() {
             <div className="aspect-square bg-white/80 border-2 border-gold/20 rounded-3xl p-8 flex items-center justify-center shadow-xl shadow-gold/5">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <video
-                  src="/Videos/Untitled design (4).mp4"
+                  src="/Videos/Untitled design (8).mp4"
                   autoPlay
                   muted
                   loop
