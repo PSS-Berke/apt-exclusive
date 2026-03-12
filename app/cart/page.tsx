@@ -55,7 +55,7 @@ export default function CartPage() {
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Items column */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 order-2 lg:order-1">
             {/* Back link */}
             <Link
               href="/home-line"
@@ -88,7 +88,7 @@ export default function CartPage() {
           </div>
 
           {/* Summary column */}
-          <div className="lg:sticky lg:top-24 lg:self-start">
+          <div className="lg:sticky lg:top-24 lg:self-start order-1 lg:order-2">
             <div className="bg-white rounded-3xl border-2 border-gold/20 p-6 md:p-8 shadow-xl shadow-gold/5">
               <h2 className="text-xl font-serif text-navy mb-6">Order Summary</h2>
 

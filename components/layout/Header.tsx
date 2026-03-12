@@ -117,7 +117,7 @@ export default function Header() {
           <div className="lg:hidden flex items-center gap-2">
             <CartIcon />
             <button
-              className="p-2 text-gray-700"
+              className="min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-700"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >

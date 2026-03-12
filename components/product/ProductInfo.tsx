@@ -85,7 +85,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
               onClick={() => setSelectedSize(size)}
               disabled={!size.inStock}
               className={`
-                relative px-5 py-4 rounded-2xl border-2 transition-all duration-500
+                relative px-5 py-4 rounded-2xl border-2 transition-all duration-500 min-h-[44px]
                 ${selectedSize.name === size.name
                   ? 'border-gold bg-white shadow-lg shadow-gold/10'
                   : size.inStock
@@ -117,7 +117,7 @@ export default function ProductInfo({ product }: ProductInfoProps) {
       </button>
 
       {/* Trust Badges - Single Elegant Line */}
-      <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 py-6 px-4 bg-gold/5 rounded-2xl text-sm text-gray-600">
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 py-6 px-4 bg-gold/5 rounded-2xl text-xs sm:text-sm text-gray-600">
         <a href="/" className="flex items-center gap-2 hover:text-gold-dark transition-colors">
           <span className="w-1.5 h-1.5 bg-gold rounded-full" />
           Financing Available

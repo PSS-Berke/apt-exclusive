@@ -47,7 +47,7 @@ export default function Hero() {
 
           {/* Visual */}
           <div className="relative">
-            <div className="aspect-square bg-white/80 border-2 border-gold/20 rounded-3xl p-8 flex items-center justify-center shadow-xl shadow-gold/5">
+            <div className="aspect-video sm:aspect-square bg-white/80 border-2 border-gold/20 rounded-3xl p-8 flex items-center justify-center shadow-xl shadow-gold/5">
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <video
                   src="/Videos/Untitled design (8).mp4"

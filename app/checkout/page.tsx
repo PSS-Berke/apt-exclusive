@@ -119,7 +119,7 @@ export default function CheckoutPage() {
         <form onSubmit={handleSubmit}>
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form column */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="lg:col-span-2 space-y-8 order-2 lg:order-1">
               {/* Contact Information */}
               <div className="bg-white rounded-3xl border-2 border-gold/10 p-6 md:p-8">
                 <h2 className="text-xl font-serif text-navy mb-6">Contact Information</h2>
@@ -147,6 +147,7 @@ export default function CheckoutPage() {
                       type="tel"
                       id="phone"
                       name="phone"
+                      inputMode="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
@@ -222,8 +223,8 @@ export default function CheckoutPage() {
                       placeholder="Apt 4B"
                     />
                   </div>
-                  <div className="grid grid-cols-6 gap-4">
-                    <div className="col-span-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-6 gap-4">
+                    <div className="sm:col-span-3">
                       <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
                         City
                       </label>
@@ -238,7 +239,7 @@ export default function CheckoutPage() {
                         placeholder="Chicago"
                       />
                     </div>
-                    <div className="col-span-1">
+                    <div className="sm:col-span-1">
                       <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
                         State
                       </label>
@@ -254,7 +255,7 @@ export default function CheckoutPage() {
                         placeholder="IL"
                       />
                     </div>
-                    <div className="col-span-2">
+                    <div className="sm:col-span-2">
                       <label htmlFor="zip" className="block text-sm font-medium text-gray-700 mb-2">
                         ZIP Code
                       </label>
@@ -262,6 +263,7 @@ export default function CheckoutPage() {
                         type="text"
                         id="zip"
                         name="zip"
+                        inputMode="numeric"
                         value={formData.zip}
                         onChange={handleInputChange}
                         required
@@ -304,7 +306,7 @@ export default function CheckoutPage() {
             </div>
 
             {/* Order Summary column */}
-            <div className="lg:sticky lg:top-24 lg:self-start">
+            <div className="lg:sticky lg:top-24 lg:self-start order-1 lg:order-2">
               <div className="bg-white rounded-3xl border-2 border-gold/20 p-6 md:p-8 shadow-xl shadow-gold/5">
                 <h2 className="text-xl font-serif text-navy mb-6">Order Summary</h2>
 

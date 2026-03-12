@@ -70,9 +70,9 @@ export default function SixComponents() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Visual representation */}
-          <div className="relative">
+        <div className="grid lg:grid-cols-2 lg:gap-12 items-center">
+          {/* Visual representation - hidden on mobile, shown on desktop */}
+          <div className="relative hidden lg:block">
             <div className="aspect-square bg-white/80 border-2 border-gold/20 rounded-3xl shadow-xl shadow-gold/5 p-8 flex items-center justify-center">
               {/* Mattress layer visualization */}
               <div className="w-full max-w-sm">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Quote } from 'lucide-react';
 
 const quotes = [
@@ -16,6 +16,7 @@ const quotes = [
 
 export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,6 +25,23 @@ export default function Reviews() {
     return () => clearInterval(interval);
   }, []);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const delta = e.changedTouches[0].clientX - touchStartX.current;
+    if (Math.abs(delta) > 40) {
+      setCurrentIndex((prev) =>
+        delta < 0
+          ? (prev + 1) % quotes.length
+          : (prev - 1 + quotes.length) % quotes.length
+      );
+    }
+    touchStartX.current = null;
+  };
+
   return (
     <section className="py-16 relative">
       {/* Soft border */}
@@ -31,7 +49,11 @@ export default function Reviews() {
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden">
+        <div
+          className="relative overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
             className="flex transition-transform duration-700 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -48,16 +70,18 @@ export default function Reviews() {
         </div>
 
         {/* Dots indicator */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center mt-8">
           {quotes.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentIndex ? 'bg-gold' : 'bg-gray-300'
-              }`}
+              className="p-3 flex items-center justify-center"
               aria-label={`Go to quote ${index + 1}`}
-            />
+            >
+              <span className={`w-2 h-2 rounded-full transition-colors block ${
+                index === currentIndex ? 'bg-gold' : 'bg-gray-300'
+              }`} />
+            </button>
           ))}
         </div>
       </div>
